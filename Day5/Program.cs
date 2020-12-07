@@ -29,13 +29,7 @@ namespace Day5
                 .Replace('L', '0')
                 .Replace('R', '1');
 
-            var binaryRow = binaryInput.Substring(0, 7);
-            var binarySeat = binaryInput.Substring(7, 3);
-
-            var rowNumber = Convert.ToInt32(binaryRow, 2);
-            var seatNumber = Convert.ToInt32(binarySeat, 2);
-
-            return rowNumber * 8 + seatNumber;
+            return Convert.ToInt32(binaryInput, 2);
         }
 
         public static int SolvePuzzle1(IList<int> input)
