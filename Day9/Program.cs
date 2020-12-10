@@ -22,11 +22,12 @@ namespace Day9
 
         public static long SolvePuzzle1(List<long> input)
         {
+            const int sizeSubArray = 25;
             var maxindex = input.Count - 1;
 
-            for (var i = 25; i <= maxindex; i++)
+            for (var i = sizeSubArray; i <= maxindex; i++)
             {
-                if (!DoesSumExist(input.GetRange(i - 25, 25), input[i]))
+                if (!DoesSumExist(input.GetRange(i - sizeSubArray, sizeSubArray), input[i]))
                 {
                     return input[i];
                 }
