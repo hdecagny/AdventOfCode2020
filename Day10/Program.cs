@@ -59,11 +59,11 @@ namespace Day10
 
             foreach (var adapter in data)
             {
-                var test1 = numberOfCombinationToReachGivenVoltage.ContainsKey(adapter - 1) ? numberOfCombinationToReachGivenVoltage[adapter - 1] : 0;
-                var test2 = numberOfCombinationToReachGivenVoltage.ContainsKey(adapter - 2) ? numberOfCombinationToReachGivenVoltage[adapter - 2] : 0;
-                var test3 = numberOfCombinationToReachGivenVoltage.ContainsKey(adapter - 3) ? numberOfCombinationToReachGivenVoltage[adapter - 3] : 0;
+                var numberCombiJoltageMinus1 = numberOfCombinationToReachGivenVoltage.ContainsKey(adapter - 1) ? numberOfCombinationToReachGivenVoltage[adapter - 1] : 0;
+                var numberCombiJoltageMinus2 = numberOfCombinationToReachGivenVoltage.ContainsKey(adapter - 2) ? numberOfCombinationToReachGivenVoltage[adapter - 2] : 0;
+                var numberCombiJoltageMinus3 = numberOfCombinationToReachGivenVoltage.ContainsKey(adapter - 3) ? numberOfCombinationToReachGivenVoltage[adapter - 3] : 0;
 
-                var numberofCombination = test1 + test2 + test3;
+                var numberofCombination = numberCombiJoltageMinus1 + numberCombiJoltageMinus2 + numberCombiJoltageMinus3;
 
                 numberOfCombinationToReachGivenVoltage.Add(adapter,numberofCombination);
             }
